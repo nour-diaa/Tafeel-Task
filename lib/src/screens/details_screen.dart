@@ -31,19 +31,20 @@ class DetailsScreen extends StatelessWidget {
                 height: screenHeight,
                 child: Stack(
                   children: <Widget>[
-                     Padding(
-                       padding: const EdgeInsets.only(top: 100),
-                       child: Align(
-                          alignment: AlignmentDirectional.topCenter,
-                          child: Text(
-                            '${snapshot.data.fname} ${snapshot.data.lname}',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 30, color: Colors.white),
-
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 100),
+                      child: Align(
+                        alignment: AlignmentDirectional.bottomCenter,
+                        child: Text(
+                          '${snapshot.data.fname} ${snapshot.data.lname}',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30,
+                              color: Colors.white),
                         ),
+                      ),
                     ),
-                     ),
                     Align(
                       alignment: AlignmentDirectional.center,
                       child: ImageContainer(snapshot.data.avatar,
@@ -56,9 +57,7 @@ class DetailsScreen extends StatelessWidget {
                         child: Text(
                           '${snapshot.data.email}',
                           textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontSize: 24, color: Colors.white),
-
+                          style: TextStyle(fontSize: 24, color: Colors.white),
                         ),
                       ),
                     ),
